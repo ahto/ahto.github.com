@@ -6,6 +6,8 @@ title: Using mercurial with rails
 This post will serve as reference for my workflow with mercurial and rails3.
 It is supposed to be understandable for beginners.
 
+I will be updating this post as I find new stuff.
+
 Beginning new project
 ---------------------
 
@@ -15,6 +17,10 @@ Beginning new project
 This command generates files assuming we are using git, so we need to modify them a bit.
 
 All the .gitkeep files are ok and should be left where they are so that empty directories are kept in version control too.
+
+Add some important folders that are empty because of the following .hgignore file
+
+    touch log/.gitkeep tmp/.gitkeep
 
 create new repo
 
@@ -53,13 +59,34 @@ And copy these in .hgignore
     .git
     *.gem
     
-Keep important folders that are empty
 
-    touch log/.gitkeep tmp/.gitkeep
-    
 Add files and do the first commit
 
-    hg add .
+    hg add
     hg commit -m "Initial"
+    
+Go to your favorite repo site and push it to there
+For example after creating new repo on (http://www.codebasehq.com)
+
+    hg push ssh://hg@codebasehq.com/username/project/reponame.hg
+    
+This is a personal preference but I like to start working always after cloning the repo so that the process is always the same.
+
+    cd ..
+    rm -Rf projectname
+    hg clone ssh://hg@codebasehq.com/username/project/reponame.hg projectname
+
+
+Doing some work for a change
+----------------------------
+
+Always start with a clone, bundle install, migrate and test run
+
+    hg clone ssh://hg@codebasehq.com/username/project/reponame.hg projectname
+    cd projectname
+    bundle install
+    rake db:migrate
+    rake spec:all
+
 
 
