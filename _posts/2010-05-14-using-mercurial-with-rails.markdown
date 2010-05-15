@@ -57,7 +57,6 @@ And copy these in .hgignore
     *.sw?
     vanity.html
     .git
-    *.gem
     
 
 Add files and do the first commit
