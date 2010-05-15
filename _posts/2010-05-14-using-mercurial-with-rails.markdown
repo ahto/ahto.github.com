@@ -65,7 +65,7 @@ Add files and do the first commit
     hg commit -m "Initial"
     
 Go to your favorite repo site and push it to there
-For example after creating new repo on (http://www.codebasehq.com)
+For example after creating new repo on (codebasehq.com)[http://www.codebasehq.com]
 
     hg push ssh://hg@codebasehq.com/username/project/reponame.hg
     
