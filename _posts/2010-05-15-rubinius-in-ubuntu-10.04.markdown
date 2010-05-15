@@ -6,7 +6,7 @@ title: Rubinius in Ubuntu 10.04
 Requirements
 ------------
 
-I have a system that has compiled MRI 1.8.7 and MRI 1.9.2-head succesfully so the only thing I added was texinfo.
+I have a system that has compiled 'MRI/YARV' 1.8.7 and 1.9.2-head succesfully so the only thing I added was texinfo.
 
     sudo aptitude install texinfo
 
