@@ -9,6 +9,7 @@ Requirements
 I have a system that has compiled MRI 1.8.7 and MRI 1.9.2-head succesfully so the only thing I added was texinfo.
 
     sudo aptitude install texinfo
+
     
 Install
 -------
@@ -16,6 +17,7 @@ Install
     rvm install rbx
     
 And that's it.
+
 
 Usage
 -----
