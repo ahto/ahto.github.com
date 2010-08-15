@@ -8,13 +8,40 @@ It is supposed to be understandable for beginners.
 
 I will be updating this post as I find new stuff.
 
+Setup the machine
+---------------------
+
+Update RVM
+
+    rvm update --head
+
+Make sure your ~/.rvmrc has at least this
+
+    rvm_install_on_use_flag=1
+    
+Install latest Bundler
+
+    gem install bundler --pre
+
+Installing rails
+---------------------
+
+    gem install rails --pre
+
 Beginning new project
 ---------------------
 
-    rails projectname -d mysql
+    rails new projectname -d mysql
     cd projectname
     
-This command generates files assuming we are using git, so we need to modify them a bit.
+Add these to the projects rvmrc files
+
+    echo "rvm 1.9.2@projectname" >> .rvmrc
+    
+Mercurial
+------------
+
+Above commands generates files assuming we are using git, so we need to modify them a bit.
 
 All the .gitkeep files are ok and should be left where they are so that empty directories are kept in version control too.
 
@@ -34,7 +61,6 @@ Create .hgignore file and remove the git version
 And copy these in .hgignore
 
     syntax: glob
-    #newline here
     .bundle
     config/database.yml
     config/*.sphinx.conf
@@ -57,6 +83,7 @@ And copy these in .hgignore
     *.sw?
     vanity.html
     .git
+    nbproject
     
 
 Add files and do the first commit
@@ -74,6 +101,17 @@ This is a personal preference but I like to start working always after cloning t
     cd ..
     rm -Rf projectname
     hg clone ssh://hg@codebasehq.com/username/project/reponame.hg projectname
+    cd projectname
+    
+Mysql
+----------
+
+In the gemfile, change mysql to mysql2 and run 'bundle update'.
+Then in database.yml, replace "adapter: mysql" with "adapter: mysql2"
+
+Then create the databases
+
+    rake db:create
 
 
 Doing some work for a change
