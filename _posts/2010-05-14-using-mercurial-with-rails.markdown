@@ -22,6 +22,10 @@ Make sure your ~/.rvmrc has at least this
 Install latest Bundler
 
     gem install bundler --pre
+    
+Add alias to ~/.bashrc for resetting database
+
+    alias reset_database='rake db:drop:all; rake db:create:all && rake db:migrate && rake db:seed'
 
 Installing rails
 ---------------------
@@ -122,7 +126,7 @@ Always start with a clone, bundle install, migrate and test run
     hg clone ssh://hg@codebasehq.com/username/project/reponame.hg projectname
     cd projectname
     bundle install
-    rake db:migrate
+    reset_database
     rake spec:all
 
 
