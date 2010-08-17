@@ -27,10 +27,12 @@ Add alias to ~/.bashrc for resetting database
 
     alias reset_database='rake db:drop:all; rake db:create:all && rake db:migrate && rake db:seed'
 
+
 Installing rails
 ---------------------
 
     gem install rails --pre
+
 
 Beginning new project
 ---------------------
@@ -41,6 +43,7 @@ Beginning new project
 Add these to the projects rvmrc files
 
     echo "rvm 1.9.2@projectname" >> .rvmrc
+   
     
 Mercurial
 ------------
@@ -106,6 +109,7 @@ This is a personal preference but I like to start working always after cloning t
     rm -Rf projectname
     hg clone ssh://hg@codebasehq.com/username/project/reponame.hg projectname
     cd projectname
+   
     
 Mysql
 ----------
