@@ -3,7 +3,7 @@ layout: post
 title: First Post
 ---
 
-This will be the best blog ever.
+For personal notes.
 
-Ok, maybe not but [envylabs](http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/) was very helpfull.
+[Envylabs](http://blog.envylabs.com/2009/08/publishing-a-blog-with-github-pages-and-jekyll/) was very helpfull setting this up.
 
